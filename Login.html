@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+   
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  navbar -->
+    <div id="navB">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="Home.html">GS-<span id="bank">BANK</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+               
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">e-Services</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Useful Links</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" id="openAccount" onclick="OpenAccount()">Create Account</a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    </div>
+    <!-- /Navbar -->
+ -->
+    <div id="main">
+        <form autocomplete="off" id="formlogin">
+            <h1 id="heading">Welcome To GS BAnk</h1>
+            <div class="inp">
+                <label for="">User Name:</label> <br>
+                <input type="text" id="uname" placeholder=" Enter User Name"> <br>
+                <span id="uerror"></span> <br>
+                <label for="">Password: </label> <br>
+                <input type="text" id="password" placeholder=" Enter password"><br>
+                <span id="perror"></span><br>
+            </div> <br>
+            <div class="btn">
+                <input type="button" id="login" onclick="Login()" value="Login" class="btn btn-success">
+                <input type="button" value="Create Account" id="sup" onclick="SignUp()" class="btn btn-info" > <br><br>
+                <input type="button" id="fpassword" value="Forgot Password" onclick="ForgotP()" class="btn btn-danger">
+            </div>
+        </form>
+    </div> <br>
+</div>
+    <div class="accountform" id="accountform" style="display: none;">
+        <form class="createAccount" autocomplete="off" id="cAccount">
+            <div class="formtitle">
+                <h1 id="wel">Welcome To GS BAnk</h1>
+                <h1>Create Account</h1>
+            </div>
+            <label> Name </label> <br>
+            <input type="text" id="name" placeholder="Enter your Full Name" required><br>
+            <span id="nameError"></span> <br>
+
+            <label for=""> Location</label> <br>
+            <input type="text" id="location" placeholder="Enter yuour Location"> <br>
+            <span id="lerror"></span> <br>
+
+            <label for="">Email</label> <br>
+            <input type="email" id="email" placeholder="Enter your mail"> <br>
+            <span id="emailError"></span><br>
+
+            <label for="">UserName</label><br>
+            <input type="text" name="" id="username" placeholder="Enter user Name"> <br>
+            <span id="userNError"></span> <br>
+
+            <label for="">Password</label><br>
+            <input type="text" name="" id="Newpassword" placeholder="Enter password"> <br>
+            <span id="passwordError"></span><br>
+
+            <label for="">Confrim Password</label><br>
+            <input type="text" name="" id="cpassword" placeholder="Confirm Password"> <br>
+            <span id="CPasswordError"></span> <br>
+
+            <label for=""> Mobile Number</label><br>
+            <input type="number" name="" id="mobile" placeholder="Enter Mobile Number"> <br>
+            <span id="merror"></span> <br>
+
+            <label for=""> Date Of Birth</label><br>
+            <input type="date" id="date"><br>
+            <span id="derror"></span> <br>
+            <br><br>
+            <div class="submitBtn">
+                <input type="button" id="cAccount" onclick="CreateAccount()" value="Create Account" class="btn btn-success">
+        </form>
+        <div class="alreadyuser">
+            <h3>Already User!<a href="#" id="loginf" onclick="OpenLogin()">Click Here To Login...</a> </h3>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="fpass1" style="display: none;">
+        <form autocomplete="off" id="fpass">
+            <h3>Forgot Password</h3>
+            <label>Enter User Name</label><br>
+            <input type="text" id="fUserName"> <br>
+            <span fUserError></span> <br>
+
+            <label>Date Of Birth</label> <br>
+            <input type="date" id="fDate" required> <br><br>
+            <input value="Get Password" type="button" onclick="GetPassword()" class="btn btn-success">
+        </form>
+        <span id="getUserName" class="sp"></span>
+        <span id="getPassword" class="sp"></span> <br>
+        <div class="alreadyuser"> 
+            <h4> <a href="#" id="loginf" onclick="OpenLogin()">Click here To login...</a> </h4>
+        </div>
+    </div>
+
+    
+    <div id="ft">
+        <!-- Footer -->
+        <footer class="page-footer font-small special-color-dark pt-4">
+
+            <!-- Footer Elements -->
+            <div class="container">
+
+                <!-- Social buttons -->
+                <ul class="list-unstyled list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/photo/?fbid=4187001961417644&set=a.298134596971086"
+                            target="_blank"> <i class="fab fa-facebook-f"> </a> </i>
+                    </li>
+                    <li class="list-inline-item">
+                        <a>
+                            <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"> </i>
+                            </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.gmail.com/" target="_blank">
+                            <i class="fab fa-google-plus-g"> </i>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
+                <a href="Home.html"> GS BANK</a>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script>
+
+       
+        
+        
+
+    </script>
+</body>
+
+</html>

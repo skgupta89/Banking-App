@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">login</div>
+    <div id="div2">forgt pss</div>
+    <div id="dv3"> cret acc</div>
+    <button onclick="login()">login</button>
+    <button onclick="Forg()">forgt pss</button>
+    <button onclick="ca()">cret acc</button>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function login(){
+            document.getElementById('div2').style.display ="none";
+            document.getElementById('dv3').style.display ="none";
+            document.getElementById('div1').style.display ="block";
+        }
+        function Forg(){
+            document.getElementById('div2').style.display ="none";
+            document.getElementById('dv3').style.display ="block";
+            document.getElementById('div1').style.display ="none";
+        }
+        function ca(){
+            document.getElementById('div2').style.display ="block";
+            document.getElementById('dv3').style.display ="none";
+            document.getElementById('div1').style.display ="none";
+        }
+    </script>
+</body>
+</html>

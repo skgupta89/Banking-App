@@ -1,0 +1,181 @@
+/* loginPage */
+
+#main {
+    margin-top: 100px;
+    margin-left: 44%;
+    
+}
+
+
+#accountform{
+    margin-top: 100px;
+    margin-left: 44%;
+}
+
+#accountform h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-left: -15px;
+    margin-bottom:15px;
+}
+
+#fpass1{
+    margin-top: 100px;
+    margin-left: 44%;
+
+}
+
+#fpass1 span{
+    font-weight: bold;
+}
+
+#fpass1 h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-left: -30px;
+
+}
+
+#main h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-left: -40px;
+    margin-bottom: 15px;
+   
+}
+
+#loginf{
+    font-size: 20px;
+    margin-left: 40px;
+    
+
+
+}
+
+#main span{
+    color: red;
+}
+
+#accountform span{
+    color: red;
+}
+
+.btn{
+    margin-top: -10px;
+    margin-left: -10px;
+    
+}
+
+#sup{
+    margin-right:-10px;
+}
+
+.alreadyuser{
+    margin-left: -55px;
+    margin-top: -5px;
+    
+}
+.alreadyuser h3{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+.submitBtn{
+    margin-left: 15px;
+}
+
+#wel{
+   margin-right: 400px;
+   background-color: rgb(86, 247, 247);
+   width: 280px;
+   height: 50px;
+   padding-top: 10px;
+   font-weight: bolder;
+   border-radius: 10px;
+}
+
+#login{
+    margin-right: 15px;
+}
+
+
+label{
+    font-weight: bold;
+}
+
+#task{
+    text-align: center;
+}
+#task .btn{
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#dCenter{
+    /* margin-left: %; */
+    width: 500px;
+    border: 2px solid balck;
+    
+    
+}
+
+/* Home Page Style */
+
+.active{
+    margin-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar-brand{
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar-brand span{
+    color:red;
+    
+}
+#detail{
+    margin-top: 80px;
+   
+}
+#detail h3{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#task{
+    background-color: rgb(124, 231, 196);
+    width: 50%;
+}
+
+#tab{
+    width: 100%;
+}
+#navB{
+    overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#debitBtn {
+    margin-left: 60px;
+}
+
+#debitForm h4{
+    margin-bottom: 20px;
+    margin-left: 40px;
+    font-weight: bold;   
+}
+
+.formstyle {
+    border: 2px solid black;
+    width: 450px;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.formstyle label{
+    font-weight: bold;
+}

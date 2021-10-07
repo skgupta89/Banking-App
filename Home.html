@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div id="navB">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="Home.html">GS-<span id="bank">BANK</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link " href="Home.html">My Account </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Payment/Transfer </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Bill Payments </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Fixed Deposite </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">e-Tax </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">e-Services</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Useful Links</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="Login.html">Create Account</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="Login.html" id="logout" onclick="Logout()">LogOut</a>
+                </li>
+                
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    </div>
+    <!-- /Navbar -->
+
+    <div id="detail" style="display: block;" class="container-fluid">
+        <h3>Account Details</h3>
+        <table class="table table table-bordered ">
+            <tbody>
+                <tr>
+                    <td style="width: 200px;">Account Number:</td>
+                    <td style="width: 300px;">8796968389</td>
+                </tr>
+                <tr>
+                    <td>Description :</td>
+                    <td>Regular CHQ</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>Sandeep Gupta</td>
+                </tr>
+                <tr>
+                    <td>Current Balance :</td>
+                    <td><input type="text" id="Balance" value="10000"></td>
+                </tr>
+                <tr>
+                    <td> Currancy :</td>
+                    <td>INR</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class=" offset-md-1 col-md-4">
+            <div id="task">
+                <input type="button" value="Transfer Money" class="btn btn-danger" onclick="Debit()"> <br>
+                <input type="button" value="Credit" class="btn btn-success" onclick="Credit()"><br>
+                <input type="button" value="Take Loan" class="btn btn-warning" onclick="Loan()"><br>
+                <input type="button" value="Show Balance" class="btn btn-info" onclick="BalShow()"><br>
+            </div>
+          </div>
+          <div class="col">
+            <div id="dCenter">
+                <div id="debitForm" class="formstyle" style="display: none;">
+                    <form autocomplete="off">
+                        <h4>Money Transfer </h4>
+                        <label for="">Amount:</label>
+                         <input type="number" id="debitAmount" placeholder="Enter Amount"> <br> <br>
+                         <label for="">Receiver's Detail:</label>
+                          <input type="text" id="debitDescription" placeholder="Enter Description"><br><br>
+                        <button id="debitBtn" type="button" class='btn btn-success' onclick="debitAmounts()"
+                            class="btn btn-">Send</button>
+                    </form>
+                </div>
+                <div id="creditForm" class="formstyle" style="display: none;">
+                    <form autocomplete="off">
+                        <h4>Credit Amount Form</h4>
+                        <label for="">Amount:</label>
+                        <input type="number" id="creditAmount" placeholder="Enter Amount"> <br> <br>
+                        <label for="">Description:</label>
+                         <input type="text" id="creditDescription" placeholder="Enter Description"><br><br>
+                        <button id="creditBtn" type="button" class='btn btn-success' onclick="creditAmounts()">Credit
+                            Amount</button>
+                    </form>
+                </div>
+        
+                <div id="loanForm" class="formstyle" style="display: none;">
+                    <form autocomplete="off">
+                        <h4>Loan Form</h4>
+                        <h5>Intreset Rate: <span id="iRate">10</span>%</h5>
+                        <label for="">Loan Amount</label>
+                         <input type="number" id="loanAmount" placeholder="Enter Loan Amount">
+                        <button onclick="checkInt()" type="button" class="btn btn-primary">Calculate Interest</button> <br><br>
+                        <label for="">Interest Amount:</label>
+                         <span id="ShowIntAmount"></span> <br><br>
+                         <label for="">Description :</label>
+                         <input type="text" id="loanDescription" placeholder="Enter Description"><br><br>
+                        <button id="takeloan" type="button" class='btn btn-success' onclick="takeLoan()">Take Loan</button>
+                    </form>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+
+    <br>
+   <br>
+    <div id="tab" style="display: block;">
+        <table id="table" class="table table-bordered ">
+            <thead class="thead-dark">
+                <tr>
+                    <th id="th">Date</th>
+                    <th>Description</th>
+                    <th>Credit</th>
+                    <th>Debit</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+        <div id="ft">
+            <!-- Footer -->
+            <footer class="page-footer font-small special-color-dark pt-4">
+
+                <!-- Footer Elements -->
+                <div class="container">
+
+                    <!-- Social buttons -->
+                    <ul class="list-unstyled list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/photo/?fbid=4187001961417644&set=a.298134596971086"
+                                target="_blank"> <i class="fab fa-facebook-f"> </a> </i>
+                        </li>
+                        <li class="list-inline-item">
+                            <a>
+                                <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"> </i>
+                                </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.google.com/">
+                                <i class="fab fa-google-plus-g"> </i>
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
+                    <a href="Home.html"> GS BANK</a>
+                </div>
+            </footer>
+        </div>
+
+
+        <script>
+        </script>
+    </div>
+</body>
+
+</html>
